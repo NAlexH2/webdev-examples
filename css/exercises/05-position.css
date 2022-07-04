@@ -4,23 +4,48 @@
   --darkgolden: #8f6805;
 }
 
+.main {
+  margin-top: 80px;
+}
+
 .box {
   padding: 10px;
   color: var(--white);
 }
 
 .static {
+  width: 300px;
+  height: 400px;
+  position: static;
+  display: inline-block;
   background-color: var(--darkviolet);
 }
 
 .relative {
+  position: relative;
+  top: -400px;
+  left: 310px;
+  width: 300px;
+  height: 400px;
   background-color: var(--purple);
 }
 
 .absolute {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
   background-color: var(--maroon);
 }
 
 .fixed {
+  z-index: 10;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
   background-color: var(--darkgolden);
 }
