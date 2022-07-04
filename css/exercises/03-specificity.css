@@ -1,25 +1,61 @@
 /* Specificity Exercise */
 
+/* X - Y - Z 
+X => # id selector
+Y => # of class/attribute selectors, psuedo-classes ':'
+Z => # of type/element selectors and pseudo-elements '::'
+*/
+
+/*
+X => n/a
+Y => .list-item
+Z => nav, a
+*/
 nav .list-item > a {
   color: var(--purple);
 }
 
+/*
+X => main
+Y => n/a
+Z => ::first-letter
+*/
 #main::first-letter {
   color: var(--purple);
 }
 
+/*
+X => n/a
+Y => [type]
+Z => input
+*/
 input[type] {
   color: var(--purple);
 }
 
+/*
+X => n/a
+Y => .main,
+Z => section, ::first-line
+*/
 section .main::first-line {
   color: var(--purple);
 }
 
-nav ul.menu li#first a:not([class='visited']) {
+/*
+X => first
+Y => .menu, class="visited" ---> NOTE: 'not' is IGNORED in specificity
+Z => nav, ul, li, a = 4
+*/
+nav ul.menu li#first a:not([class="visited"]) {
   color: var(--purple);
 }
 
+/*
+X => n/a
+Y => n/a
+Z => 10 -> all the elements listed
+*/
 div ol li ul li ol li ul li a {
   color: var(--purple);
 }
