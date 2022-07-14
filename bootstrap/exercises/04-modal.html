@@ -14,7 +14,7 @@
   <body>
     <!-- Add your code here -->
     <main class="container">
-      <div class="text-center">
+      <div class="text-center mx-auto">
         <h1 class="my-5">04 - Modal</h1>
         <!-- Button trigger modal -->
         <div class="mb-4">
@@ -25,8 +25,29 @@
           data-bs-toggle="modal"
           data-bs-target="#modal"
         >
-          M
+          More Details
         </button>
+        <div class="modal fade mt-5" id="modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4>More Details</h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                officia sequi ex veritatis accusantium a autem mollitia rerum
+                incidunt, enim dolorum distinctio. Unde quia eveniet autem dolor
+                soluta cum voluptatem.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </body>
